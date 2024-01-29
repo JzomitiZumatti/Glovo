@@ -11,7 +11,7 @@ import java.util.List;
 public class Order {
     private long id;
     private String customerName;
-    private String customerNumber;
+    private String customerPhoneNumber;
     private String address;
     private List<Product> products;
     private double totalPrice;

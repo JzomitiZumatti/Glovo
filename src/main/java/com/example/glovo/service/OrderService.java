@@ -33,7 +33,7 @@ public class OrderService {
         return Optional.ofNullable(existingOrder)
                 .map(order -> {
                     order.setCustomerName(newOrderData.getCustomerName());
-                    order.setCustomerNumber(newOrderData.getCustomerNumber());
+                    order.setCustomerPhoneNumber(newOrderData.getCustomerPhoneNumber());
                     order.setAddress(newOrderData.getAddress());
                     order.setProducts(newOrderData.getProducts());
                     order.setTotalPrice(newOrderData.getTotalPrice());
