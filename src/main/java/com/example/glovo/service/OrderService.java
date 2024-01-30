@@ -14,9 +14,8 @@ public class OrderService {
     private static long orderIdCounter = 0;
     private final ProductService productService;
 
-    public Order get(long id) {
-        return Optional.ofNullable(orders.get(id))
-                .orElseThrow(() -> new NoSuchElementException("Order with ID " + id + " does not exist"));
+    public Optional<Order> get(long id) {
+        return Optional.ofNullable(orders.get(id));
     }
 
     public Map<Long, Order> get() {

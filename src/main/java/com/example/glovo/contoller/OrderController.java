@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/orders")
@@ -16,7 +17,7 @@ public class OrderController {
     private OrderService orderService;
 
     @GetMapping("/{id}")
-    public Order get(@PathVariable long id) {
+    public Optional<Order> get(@PathVariable long id) {
         return orderService.get(id);
     }
     @GetMapping
